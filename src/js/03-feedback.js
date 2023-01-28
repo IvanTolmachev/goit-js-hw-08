@@ -28,6 +28,8 @@ function onPagaloading() {
 
 function submitReset(e) {
   e.preventDefault();
+  const formData = new FormData(form);
+  formData.forEach((value, name) => console.log(`${name}:`, value));
   e.target.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
